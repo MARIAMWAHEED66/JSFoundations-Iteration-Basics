@@ -46,12 +46,9 @@ function getEvens(numbers) {
  */
 function countOccurences(x, numbers) {
   // Your code here
-  let occur = [];
   let i = 0;
-  occur = numbers.forEach(function (numbers) {
-    while (numbers(i) == x) {
-      i++;
-    }
+  numbers.forEach(function (number) {
+    if (number === x) i++;
   });
   return i;
 }
@@ -68,8 +65,8 @@ function countOccurences(x, numbers) {
 function makeThemDoctors(students) {
   // Your code here
   let dr = [];
-  dr = students.map(function (students) {
-    dr.push("DR. " + students);
+  dr = students.map(function (student) {
+    return `Dr. ${student}`;
   });
   return dr;
 }
